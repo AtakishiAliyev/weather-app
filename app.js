@@ -37,8 +37,6 @@ getLocation()
         return position.json();
     })
     .then((data) => {
-        console.log(data);
-
         const day = new Date(data.list[0].dt_txt).toLocaleString('default', { weekday: 'long' });
         const date = data.list[0].dt_txt; 
         const city = data.city.name.replace(' City', '');
